@@ -24,6 +24,7 @@
                             greenDark: '#047857', // Emerald 700
                             greenGlow: '#34D399', // Emerald 400
                             dark: '#022C22',      // Emerald 950
+                            darker: '#011c16',
                             gray: '#F8FAFC',
                             text: '#0F172A'       // Slate 900
                         }
@@ -97,24 +98,21 @@
 <body class="antialiased selection:bg-tech-green selection:text-white">
 
     <!-- Global Enterprise Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 md:py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 
                 <!-- Corporate Logo -->
-                <div class="flex items-center gap-3 cursor-pointer">
-                    <img src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Logo" class="h-10 w-auto object-contain">
-                    <span class="text-2xl font-tech font-bold tracking-tight text-tech-text uppercase">
-                        Antevorta
-                    </span>
+                <div class="flex items-center cursor-pointer">
+                    <img id="main-logo" src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Logo" class="h-16 md:h-24 w-auto object-contain transition-all duration-300 drop-shadow-sm">
                 </div>
 
                 <!-- Desktop Links -->
-                <div class="hidden lg:flex items-center space-x-10">
-                    <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Grid Vision</a>
-                    <a href="#technology" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Core Tech</a>
-                    <a href="#sustainability" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">ESG Metrics</a>
-                    <a href="#news" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Updates</a>
+                <div class="hidden lg:flex items-center space-x-8 xl:space-x-10">
+                    <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Mechanics</a>
+                    <a href="#benefits" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Core Benefits</a>
+                    <a href="#comparison" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Data Analysis</a>
+                    <a href="#sustainability" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">ESG</a>
                     <a href="#investors" class="text-sm font-semibold text-gray-600 hover:text-tech-green transition-colors">Investors</a>
                 </div>
 
@@ -137,9 +135,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl">
             <div class="px-4 py-6 space-y-4">
-                <a href="#vision" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Grid Vision</a>
-                <a href="#technology" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Core Tech</a>
-                <a href="#sustainability" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">ESG Metrics</a>
+                <a href="#vision" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Mechanics</a>
+                <a href="#benefits" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Core Benefits</a>
+                <a href="#comparison" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Data Analysis</a>
+                <a href="#sustainability" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">ESG</a>
                 <a href="#investors" class="mobile-link block text-base font-semibold text-gray-800 hover:text-tech-green">Investors</a>
                 <hr class="border-gray-100">
                 <button class="w-full px-6 py-3 text-base font-bold rounded bg-tech-green text-white shadow-lg shadow-tech-green/30">
@@ -149,12 +148,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section (High-Tech White/Green) -->
-    <section class="hero-bg relative pt-40 pb-32 lg:pt-56 lg:pb-48 overflow-hidden min-h-[90vh] flex items-center border-b border-gray-200">
+    <!-- Hero Section -->
+    <section class="hero-bg relative pt-48 pb-32 lg:pt-64 lg:pb-48 overflow-hidden min-h-[90vh] flex items-center border-b border-gray-200">
         <!-- Animated Background Grid -->
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 tech-grid animate-grid-flow"></div>
-            <!-- Gradient fade out for the grid at the top and bottom -->
             <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
         </div>
         
@@ -169,309 +167,515 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tech-green opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-tech-green"></span>
                     </span>
-                    <span class="uppercase tracking-widest text-xs font-bold text-tech-greenDark">HVDC Synchronization Complete</span>
+                    <span class="uppercase tracking-widest text-xs font-bold text-tech-greenDark">Self-Priming Operational</span>
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
-                    The Grid. <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tech-green to-teal-500">Decentralized.</span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 leading-[1.1]">
+                    Power. <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tech-green to-teal-500">Unbound.</span>
                 </h1>
+
+                <div class="inline-block mt-2 mb-8 text-sm md:text-base font-bold tracking-widest text-tech-greenDark uppercase border-l-4 border-tech-green pl-4 reveal">
+                    "Solution to every problem on the earth, ...is earth."
+                </div>
                 
                 <p class="text-xl md:text-2xl text-gray-600 max-w-2xl font-light leading-relaxed mb-12 reveal">
-                    Antevorta’s Tier-0 energy core transcends conventional renewables. We deliver continuous, ultra-dense baseload generation with native synthetic inertia and zero emissions.
+                    Generating continuous electrical power without the use of external resources or fuel. Antevorta is the evolution of baseline energy generation.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 reveal justify-center lg:justify-start">
-                    <a href="#technology" class="px-8 py-4 text-base font-bold bg-tech-green text-white rounded hover:bg-tech-greenDark transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] inline-flex items-center justify-center gap-2">
-                        Initialize Tech Brief
+                    <a href="#vision" class="px-8 py-4 text-base font-bold bg-tech-green text-white rounded hover:bg-tech-greenDark transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] inline-flex items-center justify-center gap-2">
+                        Explore the Mechanics
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </a>
                     <a href="#investors" class="px-8 py-4 text-base font-bold bg-white text-tech-text border border-gray-300 hover:border-tech-green hover:text-tech-green transition-colors rounded inline-flex items-center justify-center">
-                        Investor Relations
+                        Investor Access
                     </a>
                 </div>
             </div>
 
             <div class="lg:w-2/5 hidden lg:block reveal animate-float">
-                <!-- Abstract Tech Visualization -->
                 <div class="relative w-full aspect-square rounded-full border border-tech-green/20 flex items-center justify-center bg-white/50 backdrop-blur-md shadow-2xl">
                     <div class="absolute inset-8 rounded-full border border-tech-green/40 border-dashed animate-[spin_60s_linear_infinite]"></div>
-                    <div class="absolute inset-16 rounded-full border border-tech-green flex items-center justify-center bg-gradient-to-br from-green-50 to-white overflow-hidden">
-                        <img src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Core" class="w-32 h-auto object-contain drop-shadow-2xl opacity-90">
+                    <div class="absolute inset-16 rounded-full border border-tech-green flex items-center justify-center bg-gradient-to-br from-green-50 to-white overflow-hidden p-6">
+                        <img src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Core" class="w-full h-auto object-contain drop-shadow-2xl opacity-90">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enterprise Metrics (The Billion Dollar Flex) -->
+    <!-- Enterprise Metrics -->
     <section class="py-12 bg-tech-dark text-white relative z-20 mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto shadow-2xl rounded-lg reveal -mt-16 lg:-mt-24 border border-tech-green/20">
         <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-tech-green/20">
             <div class="p-8 text-center group">
-                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">100x</div>
-                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Spatial Energy Density</div>
+                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">85%</div>
+                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Net Generation Efficiency</div>
             </div>
             <div class="p-8 text-center group">
                 <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">24/7</div>
-                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Base-Load Continuity</div>
+                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Continuous Output</div>
             </div>
             <div class="p-8 text-center group">
-                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">0%</div>
-                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Scope 1/2/3 Emissions</div>
+                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">0</div>
+                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">External Fuel Required</div>
             </div>
             <div class="p-8 text-center group">
-                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">T-0</div>
-                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Grid Inertia Rating</div>
+                <div class="text-4xl lg:text-5xl font-tech font-bold mb-2 text-tech-green group-hover:scale-110 transition-transform">60s</div>
+                <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Initialization Time</div>
             </div>
         </div>
     </section>
 
-    <!-- The Problem / Solution (Power Sector Tone) -->
+    <!-- Project Description & Mechanics -->
     <section id="vision" class="py-24 lg:py-32 bg-white text-tech-text">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
                     <div class="inline-flex items-center gap-2 text-tech-green font-bold text-sm uppercase tracking-widest mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                        Solving the Duck Curve
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        Theoretical Foundation
                     </div>
-                    <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">Mastering Grid Stability.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">The Self-Priming Mechanism.</h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        The global transition to variable renewable energy (VRE) suffers from severe intermittency. Solar and wind generation creates massive fluctuations in grid frequency, requiring expensive peaker plants to bridge the "Duck Curve" generation gap.
+                        Our project is built upon the foundational principles of Archimedes and Nikola Tesla, heavily advanced by the mechanical studies conducted by James Watt and his contemporary, James Pickard. 
                     </p>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Antevorta solves the baseline power dilemma. Our prototype is engineered to provide continuous, dispatchable power with integrated reactive power support. We eliminate the need for massive, ecologically disruptive battery energy storage systems (BESS).
+                        The Antevorta Turbine operates on our proprietary <strong class="text-tech-text">Self-Priming Load Method</strong>. Initiated via <strong class="text-tech-text">Triggering Technology</strong>, the system requires absolutely no external resources or combustible fuel to commence operations. 
                     </p>
-                    <a href="#technology" class="text-tech-green font-bold inline-flex items-center hover:text-tech-greenDark transition-colors group">
-                        Review Technical Specifications
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Once triggered, the turbine generates internal electrical power within the first 60 seconds. This electricity is used to precisely position the <strong class="text-tech-text">Load Piston</strong> at a calculated location, locking the system into continuous, 24/7 motion. To maintain this perpetual operation, the turbine uses a maximum of only 20% of its self-generated electrical power, leaving the vast majority available for grid export.
+                    </p>
                 </div>
                 
-                <!-- Corporate Graphic / Abstract visual -->
-                <div class="relative reveal aspect-square lg:aspect-[4/3] bg-tech-gray p-8 flex flex-col justify-center border border-gray-200 rounded-xl hover:shadow-2xl hover:border-tech-green/30 transition-all">
-                    <div class="absolute top-0 right-0 p-6">
-                        <svg class="w-8 h-8 text-tech-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <div class="relative reveal aspect-square lg:aspect-[4/3] bg-tech-gray p-8 flex flex-col justify-center border border-gray-200 rounded-xl hover:shadow-2xl hover:border-tech-green/30 transition-all overflow-hidden group">
+                    <div class="absolute inset-0 tech-grid opacity-30"></div>
+                    <div class="relative z-10 text-center">
+                        <h3 class="text-2xl font-bold mb-10">Operational Cycle Profile</h3>
+                        
+                        <div class="w-48 h-48 mx-auto rounded-full border-[12px] border-gray-200 relative mb-6">
+                            <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="44" fill="none" stroke="#10B981" stroke-width="12" stroke-dasharray="276.46" stroke-dashoffset="55.29" class="transition-all duration-1000"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-3xl font-tech font-bold text-tech-text">80%</span>
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Net Output</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center gap-6 text-sm font-semibold">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                                <span class="text-gray-600">20% Maintenance Load</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-tech-green rounded-full shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                                <span class="text-gray-600">80% Grid Export</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-8">Capacity Factor Comparison</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="group">
-                            <div class="flex justify-between text-sm font-semibold mb-2">
-                                <span class="text-gray-500">Utility-Scale Solar (Intermittent)</span>
-                                <span class="text-gray-900 group-hover:text-tech-green transition-colors">24.5% Average</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Benefits -->
+    <section id="benefits" class="py-24 lg:py-32 bg-tech-gray border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <span class="text-tech-green font-bold tracking-widest uppercase text-sm mb-4 block">System Advantages</span>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">Benefits of the Project</h2>
+                <p class="text-xl text-gray-600">
+                    Revolutionizing conventional thermal and nuclear power generation paradigms through autonomous, high-efficiency mechanics.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">Environmentally Friendly</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The proposed project operates in total harmony with the ecosystem. It is environmentally friendly in every way, ensuring no ecological disruption.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">Zero Pollution</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Unlike traditional generation methods, this project produces almost no pollution—eliminating smog, exhaust, and hazardous waste.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">80-85% Generation Efficiency</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        After accounting for the minor internal load required to maintain continuous motion, the net electric generation efficiency remains an extraordinary 80% to 85%.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">Streamlined Infrastructure</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Our turbine eliminates the need for boilers, water heaters, superheaters, steam turbines, and complex raw resource transportation logistics.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">Autonomous Operation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Requires zero external fuel to initiate. It only utilizes a small amount of its self-generated electrical power to keep the turbine moving indefinitely.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-xl hover:shadow-xl hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
+                        <svg class="w-6 h-6 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-tech-text">Ultra-Compact Footprint</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        When compared to a thermal or nuclear power unit of equivalent capacity, our project requires drastically less space to install and operate.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Analysis & Comparison -->
+    <section id="comparison" class="py-24 lg:py-32 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <span class="text-tech-green font-bold tracking-widest uppercase text-sm mb-4 block">Empirical Data</span>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-tech-text">Comparative Analysis Matrix</h2>
+                <p class="text-xl text-gray-600">
+                    A comprehensive breakdown demonstrating the financial, spatial, and operational superiority of the Antevorta Power System over traditional and renewable alternatives.
+                </p>
+            </div>
+
+            <!-- Paradigm Shift: Infrastructure Comparison -->
+            <div class="mb-24 reveal">
+                <h3 class="text-2xl font-bold mb-8 text-center">Infrastructure Paradigm Shift</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Thermal Card -->
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                             </div>
-                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                                <div class="bg-gray-400 h-2 rounded-full" style="width: 24.5%"></div>
-                            </div>
+                            <h4 class="text-xl font-bold text-gray-800">Thermal Power Station (TPS)</h4>
                         </div>
-                        <div class="group">
-                            <div class="flex justify-between text-sm font-semibold mb-2">
-                                <span class="text-gray-500">Offshore Wind (Variable)</span>
-                                <span class="text-gray-900 group-hover:text-tech-green transition-colors">41.0% Average</span>
-                            </div>
-                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                                <div class="bg-gray-400 h-2 rounded-full" style="width: 41%"></div>
-                            </div>
+                        <p class="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wide">Major Components & Expenses Required:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-gray-600">
+                            <ul class="space-y-2 list-disc pl-4">
+                                <li class="line-through decoration-red-400 opacity-60">Huge Land</li>
+                                <li class="line-through decoration-red-400 opacity-60">Coal Storage Facility</li>
+                                <li class="line-through decoration-red-400 opacity-60">Water Storage Facility</li>
+                                <li class="line-through decoration-red-400 opacity-60">Coal Handling Plant</li>
+                                <li class="line-through decoration-red-400 opacity-60">Water Treatment Facility</li>
+                                <li class="line-through decoration-red-400 opacity-60">Boiler & Boiler Feed Pump</li>
+                                <li class="line-through decoration-red-400 opacity-60">Low/High-Pressure Heaters</li>
+                                <li class="line-through decoration-red-400 opacity-60">SuperHeater & Steam Drum</li>
+                                <li class="line-through decoration-red-400 opacity-60">Steam Condenser & Reheater</li>
+                            </ul>
+                            <ul class="space-y-2 list-disc pl-4">
+                                <li class="line-through decoration-red-400 opacity-60">Condensate Extraction Pump</li>
+                                <li class="line-through decoration-red-400 opacity-60">Cooling Tower</li>
+                                <li class="line-through decoration-red-400 opacity-60">Railway Track System for Coal</li>
+                                <li class="line-through decoration-red-400 opacity-60">Chimney</li>
+                                <li class="line-through decoration-red-400 opacity-60">Ash handling System</li>
+                                <li class="line-through decoration-red-400 opacity-60">Water Circulation System</li>
+                                <li class="line-through decoration-red-400 opacity-60">Huge cost of Labour</li>
+                                <li class="line-through decoration-red-400 opacity-60">Pollution Control Expense</li>
+                                <li class="line-through decoration-red-400 opacity-60">Huge Running Cost of Coal/Water</li>
+                            </ul>
                         </div>
-                        <div class="group">
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span class="text-tech-green">Antevorta Core (Baseload)</span>
-                                <span class="text-tech-green">98.4% Dispatchable</span>
+                    </div>
+
+                    <!-- Antevorta Card -->
+                    <div class="bg-tech-dark text-white border border-tech-green/30 p-8 rounded-2xl shadow-[0_10px_30px_rgba(16,185,129,0.15)] relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <svg class="w-32 h-32 text-tech-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-tech-green/20 flex items-center justify-center text-tech-green border border-tech-green/40 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-white">Antevorta Power Station</h4>
                             </div>
-                            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden shadow-[0_0_10px_rgba(16,185,129,0.2)]">
-                                <div class="bg-tech-green h-2 rounded-full relative" style="width: 98%">
-                                    <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.3)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] animate-[gridFlow_1s_linear_infinite]"></div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="font-bold text-tech-green mb-1">Massive Cost-Cutting at Scale</h5>
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        <strong class="text-white">Nothing from Point No. 2 to Point No. 22 is required in our turbine.</strong> This structural elimination results in profound financial savings when deployed at a commercial scale.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-tech-green mb-1">Zero Fuel Dependency</h5>
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        Our turbine doesn't require any type of fuel to generate energy. This saves a massive sum of capital in comparison to Thermal or Non-Renewable generation systems.
+                                    </p>
+                                </div>
+                                <div class="pt-4 border-t border-white/10">
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-tech-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            Significantly less land required than equivalent TPS.
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-tech-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            Cooling system only required for Generators, not the Turbine.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- The Prototype / Technology -->
-    <section id="technology" class="py-24 lg:py-32 bg-tech-gray border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-                <span class="text-tech-green font-bold tracking-widest uppercase text-sm mb-4 block">Core Infrastructure Architecture</span>
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6">Redefining Generation</h2>
-                <p class="text-xl text-gray-600">
-                    A novel thermodynamic conversion process engineered for heavy industrial load centers, hyperscale data centers, and national grid modernization.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tech Feature 1 -->
-                <div class="bg-white p-10 border border-gray-100 rounded-xl hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] hover:border-tech-green/30 transition-all duration-300 reveal group">
-                    <div class="w-14 h-14 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
-                        <svg class="w-7 h-7 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-tech-text">High-Density Synthetic Inertia</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">
-                        Provides critical grid stability lacking in traditional inverter-based renewables. Our core natively supplies reactive power and frequency regulation, mimicking the inertial response of heavy synchronous generators.
-                    </p>
+            <!-- Table: 1 Lakh Units/Day Comparison -->
+            <div class="reveal">
+                <h3 class="text-2xl font-bold mb-6 text-center">Analysis for Generating 1 Lakh (100,000) Units Per Day</h3>
+                <div class="overflow-x-auto rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-200">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-gray-50 text-gray-700 font-bold uppercase text-xs border-b border-gray-200">
+                            <tr>
+                                <th class="px-6 py-4 whitespace-nowrap">Parameter</th>
+                                <th class="px-6 py-4 whitespace-nowrap border-l border-gray-200 text-center">Thermal (Coal)</th>
+                                <th class="px-6 py-4 whitespace-nowrap border-l border-gray-200 text-center">Hydroelectric</th>
+                                <th class="px-6 py-4 whitespace-nowrap border-l border-gray-200 text-center">Wind</th>
+                                <th class="px-6 py-4 whitespace-nowrap border-l border-gray-200 text-center">Solar</th>
+                                <th class="px-6 py-4 whitespace-nowrap bg-tech-green text-white text-center shadow-inner">Antevorta Power</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 bg-white">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Units/day per MW</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">20,000 - 22,000</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">8,000</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">6,000</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">4,000</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">24,000</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Capacity Needed (MW)</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">~5</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">~12.5</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">~16.7</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">~25</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">~4.17</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Plant Construction Cost</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹6-10 Cr/MW</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹8-15 Cr/MW</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹6-7.5 Cr/MW</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹4-5 Cr/MW</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">₹10 Cr/MW</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Total Project Cost</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹30-50 Cr</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹100-110 Cr</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹100-120 Cr</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹100-125 Cr</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">₹41.7 Cr</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Production Cost / Unit</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹2.5 - ₹4</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹0.8 - ₹1.5</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹2 - ₹3</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">₹1.8 - ₹2.5</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">₹0.90 / unit</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Land Requirement</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">5-10 acres</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">5-8 acres</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">70-85 acres</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">95-110 acres</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">1 acre/MW (~4.17 acres)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Installation Time</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">3-5 years</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">4-7 years</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">12-18 months</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">2-6 months</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">6 months</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Fuel/Resource Dependency</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-red-600 font-medium">Coal (continuous)</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">Seasonal water flow</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-amber-600 font-medium">Wind speed</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-amber-600 font-medium">Daylight</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">Not season dependent</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Dispatchability</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-tech-green font-medium">Stable (24x7)</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">Seasonal, dispatchable</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-red-600 font-medium">Intermittent</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-red-600 font-medium">Daytime only</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">Stable (anytime)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Carbon Emissions</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-red-600 font-bold">Very High</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">Very Low</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-tech-green font-medium">None</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-tech-green font-medium">None</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">None</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">O&M Cost</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-red-600 font-medium">High</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-tech-green font-medium">Very Low</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">Moderate</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center text-tech-green font-medium">Very Low</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">Very Low</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Plant Life</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">25-30 years</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center font-bold text-tech-green">50-75 years</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">20-25 years</td>
+                                <td class="px-6 py-4 border-l border-gray-100 text-center">25-30 years</td>
+                                <td class="px-6 py-4 font-bold text-tech-greenDark bg-tech-green/5 text-center">50-75 years</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                <!-- Tech Feature 2 -->
-                <div class="bg-white p-10 border border-gray-100 rounded-xl hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
-                        <svg class="w-7 h-7 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-tech-text">Microgrid & Islanding Ready</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">
-                        Integrates seamlessly with IEEE 1547 standards for distributed energy resources. Offers grid-forming capabilities and black-start functionality to ensure critical infrastructure never experiences downtime.
-                    </p>
-                </div>
-
-                <!-- Tech Feature 3 -->
-                <div class="bg-white p-10 border border-gray-100 rounded-xl hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] hover:border-tech-green/30 transition-all duration-300 reveal group" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 bg-tech-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-tech-green transition-colors">
-                        <svg class="w-7 h-7 text-tech-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-tech-text">HVDC Transmission Optimized</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">
-                        Co-locating generation near load centers reduces high-voltage transmission step-down losses by up to 14%. Direct high-voltage direct current (HVDC) out-coupling available for macro-grid injection.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Impact / ESG -->
-    <section id="sustainability" class="py-24 bg-tech-dark text-white relative overflow-hidden">
-        <div class="absolute inset-0 tech-grid opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <span class="text-tech-green font-bold tracking-widest uppercase text-sm mb-4 block">Corporate Responsibility</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">ESG & Post-Carbon Economics</h2>
-                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
-                        Antevorta is committed to a post-carbon future. By replacing vast, ecologically disruptive solar farms and avian-hazardous wind turbines with compact, high-yield cores, we are returning land to nature while accelerating the global economy.
-                    </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-tech-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Zero reliance on conflict-minerals or rare-earth supply chains.
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-tech-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            100% reduction in Scope 1 and Scope 2 emissions at scale.
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-tech-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Full compliance with NERC CIP cyber-security mandates.
-                        </li>
-                    </ul>
-                    <button class="px-8 py-3 bg-transparent border border-tech-green text-tech-green font-bold hover:bg-tech-green hover:text-white transition-all rounded shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                        Download 2024 ESG Report (PDF)
-                    </button>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4 reveal">
-                    <div class="bg-white/5 p-8 border border-tech-green/20 rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        <div class="text-3xl font-tech font-bold text-white mb-2">94%</div>
-                        <div class="text-sm text-tech-green uppercase tracking-wider font-semibold">Land Reclamation</div>
-                    </div>
-                    <div class="bg-white/5 p-8 border border-tech-green/20 rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        <div class="text-3xl font-tech font-bold text-white mb-2">0</div>
-                        <div class="text-sm text-tech-green uppercase tracking-wider font-semibold">Carbon Intensity</div>
-                    </div>
-                    <div class="bg-white/5 p-8 border border-tech-green/20 rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        <div class="text-3xl font-tech font-bold text-white mb-2">50+ MW</div>
-                        <div class="text-sm text-tech-green uppercase tracking-wider font-semibold">Per Module Output</div>
-                    </div>
-                    <div class="bg-white/5 p-8 border border-tech-green/20 rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        <div class="text-3xl font-tech font-bold text-white mb-2">Tier-1</div>
-                        <div class="text-sm text-tech-green uppercase tracking-wider font-semibold">Grid Reliability</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsroom / Corporate Press -->
-    <section id="news" class="py-24 bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12 reveal">
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-tech-text mb-2">Sector Updates</h2>
-                    <p class="text-gray-600">Grid deployment announcements and technological milestones.</p>
-                </div>
-                <a href="#" class="hidden md:inline-flex text-tech-green font-bold items-center hover:text-tech-greenDark transition-colors">
-                    View All Releases
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <a href="#" class="group block border-t-[3px] border-gray-100 hover:border-tech-green pt-6 reveal transition-all">
-                    <span class="text-sm font-semibold text-tech-green uppercase tracking-wide block mb-3">May 15, 2024</span>
-                    <h3 class="text-xl font-bold text-tech-text mb-3 group-hover:text-tech-greenDark transition-colors">Antevorta Core Successfully Synchronizes with National Transmission Grid</h3>
-                    <p class="text-gray-600 text-sm line-clamp-3">Phase III interconnect studies complete. The prototype demonstrated flawless reactive power injection, stabilizing local voltages during simulated grid faults.</p>
-                </a>
-                
-                <!-- Article 2 -->
-                <a href="#" class="group block border-t-[3px] border-gray-100 hover:border-tech-green pt-6 reveal transition-all" style="transition-delay: 100ms;">
-                    <span class="text-sm font-semibold text-tech-green uppercase tracking-wide block mb-3">April 02, 2024</span>
-                    <h3 class="text-xl font-bold text-tech-text mb-3 group-hover:text-tech-greenDark transition-colors">Strategic Partnership Signed for Hyperscale Data Center Power</h3>
-                    <p class="text-gray-600 text-sm line-clamp-3">A major cloud provider has contracted Antevorta to provide behind-the-meter generation, ensuring 99.999% uptime independently of the stressed local grid.</p>
-                </a>
-
-                <!-- Article 3 -->
-                <a href="#" class="group block border-t-[3px] border-gray-100 hover:border-tech-green pt-6 reveal transition-all" style="transition-delay: 200ms;">
-                    <span class="text-sm font-semibold text-tech-green uppercase tracking-wide block mb-3">January 28, 2024</span>
-                    <h3 class="text-xl font-bold text-tech-text mb-3 group-hover:text-tech-greenDark transition-colors">ISO 9001 and ISO 14001 Certification Achieved for Core Manufacturing</h3>
-                    <p class="text-gray-600 text-sm line-clamp-3">Strengthening quality management and environmental compliance as Antevorta scales production facilities for worldwide commercial deployment.</p>
-                </a>
             </div>
             
-            <div class="mt-8 md:hidden">
-                <a href="#" class="text-tech-green font-bold inline-flex items-center hover:text-tech-greenDark">
-                    View All Releases <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
+            <!-- Key Insights Footer -->
+            <div class="mt-8 bg-gray-50 p-6 rounded-xl border border-gray-200 flex flex-wrap justify-between gap-4 text-sm reveal">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-800">Fastest Setup:</span> <span class="text-tech-green font-semibold">Solar / Antevorta</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-800">Highest Output/MW:</span> <span class="text-tech-green font-semibold">Antevorta (24,000/day)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-800">Lowest Cost/Unit:</span> <span class="text-tech-green font-semibold">Hydro / Antevorta</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-800">Least Land Use:</span> <span class="text-tech-green font-semibold">Antevorta</span>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Investor Relations / CTA -->
-    <section id="investors" class="py-24 bg-tech-gray text-center reveal relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-white to-tech-gray"></div>
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-tech-text mb-6">Invest in the Future Grid</h2>
-            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-                Antevorta is currently engaged in discussions with transmission operators, utility providers, and infrastructure funds. To request the confidential technical prospectus, please register below.
-            </p>
-            <form class="flex flex-col sm:flex-row gap-0 max-w-lg mx-auto shadow-2xl rounded overflow-hidden border border-gray-200" onsubmit="event.preventDefault();">
-                <input 
-                    type="email" 
-                    placeholder="Corporate Email Address" 
-                    class="flex-1 px-6 py-4 border-none focus:outline-none focus:ring-2 focus:ring-tech-green bg-white text-tech-text"
-                    required
-                />
-                <button 
-                    type="submit"
-                    class="px-8 py-4 bg-tech-green text-white font-bold hover:bg-tech-greenDark transition-colors whitespace-nowrap"
-                >
-                    Request Access
-                </button>
-            </form>
-            <p class="text-xs text-gray-500 mt-4">By requesting access, you agree to our standard Mutual Non-Disclosure Agreement (MNDA).</p>
+    <!-- Strategic Commercialization & Investors / CTA -->
+    <section id="investors" class="py-32 bg-tech-darker text-center relative overflow-hidden">
+        <!-- High-End Building / Architectural Background -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity grayscale"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-tech-darker via-tech-darker/90 to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Massive Business Goal Flex (Redesigned for Premium Aesthetic) -->
+            <div class="mb-20 reveal">
+                <div class="inline-flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 rounded-full border border-yellow-500/30 flex items-center justify-center bg-yellow-500/10 backdrop-blur-sm">
+                        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <span class="text-xl md:text-2xl font-bold tracking-widest uppercase text-yellow-500 drop-shadow-md">Business Goal</span>
+                </div>
+                <div class="text-6xl md:text-8xl lg:text-9xl font-tech font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 via-yellow-400 to-yellow-700 drop-shadow-2xl mb-4 tracking-tighter">
+                    ₹100,000 CR
+                </div>
+                <div class="text-2xl md:text-3xl font-bold tracking-widest uppercase text-white/90 drop-shadow-lg">Annual Turnover</div>
+            </div>
+
+            <!-- Licensing & Strategic Traction Panels -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 text-left reveal">
+                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-2xl shadow-2xl hover:border-yellow-500/30 transition-colors">
+                    <h4 class="text-2xl font-bold text-yellow-500 mb-4 font-tech">Commercial Licensing Model</h4>
+                    <p class="text-gray-300 mb-6 text-sm md:text-base leading-relaxed">
+                        Antevorta operates on a high-leverage commercialization strategy, focusing on non-exclusive licensing agreements for large-scale grid implementations.
+                    </p>
+                    <ul class="space-y-4 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-tech-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 
+                            <span><strong>Capital Requirement:</strong> ₹15,000 Crores ($2 Billion USD) one-time payment per license.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-tech-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 
+                            <span><strong>Minimum Viable Scale:</strong> Initial commercial contracts mandate a minimum 500 MegaWatt capacity deployment.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-2xl shadow-2xl hover:border-yellow-500/30 transition-colors">
+                    <h4 class="text-2xl font-bold text-yellow-500 mb-4 font-tech">Strategic Traction</h4>
+                    <p class="text-gray-300 mb-6 text-sm md:text-base leading-relaxed">
+                        Antevorta is engaged in high-level reviews with top-tier international energy conglomerates and sovereign institutions.
+                    </p>
+                    <ul class="space-y-4 text-sm md:text-base text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-tech-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
+                            <span><strong>Corporate Evaluation:</strong> Project proposals are actively under review by executive management at major utilities (e.g., Tata Power).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-tech-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
+                            <span><strong>Strict Confidentiality:</strong> All prototype demonstrations are subject to rigorous Non-Disclosure Agreements (NDA) and financial vetting.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Email Capture Area -->
+            <div class="bg-tech-dark/60 backdrop-blur-2xl border border-tech-green/40 p-10 md:p-14 rounded-3xl shadow-[0_0_50px_rgba(16,185,129,0.1)] reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Invest in the Future Grid</h2>
+                <p class="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">
+                    To request the technical prospectus and initiate NDA procedures for licensing discussions, please register below.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-0 max-w-xl mx-auto rounded overflow-hidden border border-tech-green/50 focus-within:ring-2 focus-within:ring-tech-green focus-within:border-transparent transition-all shadow-xl" onsubmit="event.preventDefault();">
+                    <input 
+                        type="email" 
+                        placeholder="Corporate Email Address" 
+                        class="flex-1 px-8 py-5 border-none focus:outline-none bg-white/10 text-white placeholder-gray-400 text-lg"
+                        required
+                    />
+                    <button 
+                        type="submit"
+                        class="px-10 py-5 bg-tech-green text-white font-bold text-lg hover:bg-tech-greenDark transition-colors whitespace-nowrap"
+                    >
+                        Request Access
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Corporate Footer -->
-    <footer class="bg-tech-dark pt-16 pb-8 text-white relative">
-        <div class="absolute inset-0 tech-grid opacity-5"></div>
+    <footer class="bg-tech-text pt-16 pb-8 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                 
                 <div class="lg:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Logo" class="h-8 w-auto object-contain">
-                        <span class="text-xl font-tech font-bold tracking-widest uppercase">Antevorta</span>
+                    <div class="flex items-center gap-3 mb-6 bg-white w-fit p-2 rounded-lg border border-white/10">
+                        <img src="https://i.ibb.co/HTqzxXhJ/anti.png" alt="Antevorta Logo" class="h-10 w-auto object-contain">
                     </div>
                     <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
                         Engineering a resilient, high-density energy economy. Providing continuous, dispatchable power that transcends the limitations of legacy renewables.
@@ -502,7 +706,7 @@
                     <h4 class="text-sm font-bold uppercase tracking-wider mb-4 text-tech-green">Compliance</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
                         <li><a href="#" class="hover:text-tech-green transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-tech-green transition-colors">NERC CIP Standards</a></li>
+                        <li><a href="#" class="hover:text-tech-green transition-colors">Environmental Standards</a></li>
                         <li><a href="#" class="hover:text-tech-green transition-colors">IEEE 1547 Compliance</a></li>
                         <li><a href="#" class="hover:text-tech-green transition-colors">Ethics & Safety</a></li>
                     </ul>
@@ -530,15 +734,27 @@
         // Set dynamic year
         document.getElementById('year').innerText = new Date().getFullYear();
 
-        // Navbar Scroll Effect
+        // Navbar Scroll Effect with Logo Resizing
         const navbar = document.getElementById('navbar');
+        const mainLogo = document.getElementById('main-logo');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
+                // Scrolled state
                 navbar.classList.add('shadow-sm', 'py-2');
-                navbar.classList.remove('py-4');
+                navbar.classList.remove('py-4', 'md:py-6');
+                if (mainLogo) {
+                    mainLogo.classList.remove('h-16', 'md:h-24');
+                    mainLogo.classList.add('h-12', 'md:h-16');
+                }
             } else {
+                // Top state
                 navbar.classList.remove('shadow-sm', 'py-2');
-                navbar.classList.add('py-4');
+                navbar.classList.add('py-4', 'md:py-6');
+                if (mainLogo) {
+                    mainLogo.classList.remove('h-12', 'md:h-16');
+                    mainLogo.classList.add('h-16', 'md:h-24');
+                }
             }
         });
 
