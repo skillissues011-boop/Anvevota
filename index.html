@@ -1,0 +1,389 @@
+```react
+import React, { useState, useEffect } from 'react';
+import { 
+  Menu, 
+  X, 
+  Zap, 
+  Sun, 
+  Wind, 
+  Activity, 
+  Globe, 
+  ArrowRight, 
+  ShieldCheck, 
+  Cpu, 
+  ChevronRight,
+  BatteryCharging
+} from 'lucide-react';
+
+const App = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Handle scroll effect for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Technology', href: '#technology' },
+    { name: 'Performance', href: '#performance' },
+    { name: 'Impact', href: '#impact' },
+    { name: 'About', href: '#about' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-cyan-500 selection:text-white">
+      
+      {/* Navigation */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-3' : 'bg-transparent py-5'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+                <Zap className="w-5 h-5 text-white" fill="currentColor" />
+              </div>
+              <span className="text-2xl font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                Antevorta
+              </span>
+            </div>
+
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <button className="px-5 py-2 text-sm font-semibold rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/50 hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]">
+                Investor Portal
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-slate-300 hover:text-white p-2"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Nav Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl">
+            <div className="px-4 pt-2 pb-6 space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block px-3 py-3 text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800 rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+              <div className="pt-4">
+                <button className="w-full px-5 py-3 text-base font-semibold rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/50">
+                  Investor Portal
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        {/* Background Effects */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-cyan-400 text-sm font-medium mb-8 backdrop-blur-sm">
+            <Activity className="w-4 h-4 animate-pulse" />
+            <span>Prototype Phase Complete</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-tight">
+            The Grid,<br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+              Reimagined.
+            </span>
+          </h1>
+          
+          <p className="mt-6 text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+            Antevorta has engineered a paradigm-shifting energy core that generates <strong className="text-white font-medium">exponentially more electricity</strong> than any existing solar, wind, or conventional generation system.
+          </p>
+          
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <button className="px-8 py-4 text-lg font-bold rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)] flex items-center justify-center gap-2">
+              Explore the Tech <ArrowRight className="w-5 h-5" />
+            </button>
+            <button className="px-8 py-4 text-lg font-bold rounded-full bg-transparent text-white border border-slate-600 hover:bg-slate-800 hover:border-slate-500 transition-all duration-300 flex items-center justify-center gap-2">
+              View Whitepaper
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem & Solution (Stats) */}
+      <section id="technology" className="py-24 bg-slate-900 border-y border-slate-800 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Beyond the Elements</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Solar is limited by daylight. Wind is dictated by weather. Antevorta operates on a continuous, ultra-dense generation principle that ignores environmental constraints.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Solar Card */}
+            <div className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-slate-600 transition-colors group">
+              <div className="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center mb-6 border border-amber-500/20 group-hover:scale-110 transition-transform">
+                <Sun className="w-7 h-7 text-amber-500" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-200">Outperforms Solar</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                Achieves 100x the energy density per square meter compared to standard commercial photovoltaic panels, requiring a fraction of the land mass.
+              </p>
+              <div className="text-amber-500 font-bold text-3xl">100x</div>
+              <div className="text-xs text-slate-500 uppercase tracking-wide mt-1">Energy Density</div>
+            </div>
+
+            {/* Wind Card */}
+            <div className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-slate-600 transition-colors group">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                <Wind className="w-7 h-7 text-emerald-500" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-200">Eclipses Wind</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                Not reliant on kinetic weather patterns. Generates baseload power consistently, surpassing the peak output of massive offshore turbines.
+              </p>
+              <div className="text-emerald-500 font-bold text-3xl">24/7</div>
+              <div className="text-xs text-slate-500 uppercase tracking-wide mt-1">Uninterrupted Yield</div>
+            </div>
+
+            {/* Antevorta Card */}
+            <div className="bg-gradient-to-b from-cyan-900/40 to-slate-950 p-8 rounded-2xl border border-cyan-500/50 shadow-[0_0_30px_rgba(34,211,238,0.1)] relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-4">
+                <span className="flex h-3 w-3 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                </span>
+              </div>
+              <div className="w-14 h-14 rounded-full bg-cyan-500/20 flex items-center justify-center mb-6 border border-cyan-500/40 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+                <Zap className="w-7 h-7 text-cyan-400" fill="currentColor" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">The Antevorta Core</h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                Our proprietary prototype harnesses a novel thermodynamic conversion process, establishing a new tier of Tier-0 power generation.
+              </p>
+              <div className="text-cyan-400 font-bold text-3xl">Zero</div>
+              <div className="text-xs text-cyan-400/70 uppercase tracking-wide mt-1">Carbon Emissions</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Comparison Chart */}
+      <section id="performance" className="py-24 bg-slate-950 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-16">
+            
+            <div className="w-full md:w-1/2 space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold leading-tight">Unprecedented Generation Metrics</h2>
+                <p className="text-slate-400">
+                  Data from our Phase III prototype runs demonstrate an output delta that makes current renewables conceptually obsolete for heavy industrial baseload.
+                </p>
+              </div>
+
+              {/* Chart Visualization */}
+              <div className="space-y-6 pt-4">
+                
+                {/* Solar Bar */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-slate-300 flex items-center gap-2"><Sun className="w-4 h-4 text-amber-500" /> Commercial Solar</span>
+                    <span className="text-slate-500">~20% Efficiency</span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-full bg-amber-500 rounded-full w-[15%]"></div>
+                  </div>
+                </div>
+
+                {/* Wind Bar */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-slate-300 flex items-center gap-2"><Wind className="w-4 h-4 text-emerald-500" /> Offshore Wind</span>
+                    <span className="text-slate-500">~45% Efficiency</span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-full bg-emerald-500 rounded-full w-[35%]"></div>
+                  </div>
+                </div>
+
+                {/* Antevorta Bar */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm font-bold">
+                    <span className="text-cyan-400 flex items-center gap-2"><Zap className="w-4 h-4" /> Antevorta Prototype</span>
+                    <span className="text-cyan-400">98.4% Efficiency</span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-800 rounded-full overflow-hidden shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                    <div className="h-full bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full w-[95%] relative">
+                      <div className="absolute top-0 right-0 bottom-0 left-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.2)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] animate-[shimmer_1s_infinite_linear]"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="w-full md:w-1/2 relative">
+              <div className="aspect-square rounded-full border border-slate-800 relative flex items-center justify-center before:absolute before:inset-0 before:rounded-full before:border-2 before:border-cyan-500/20 before:animate-[ping_3s_infinite]">
+                <div className="absolute inset-4 rounded-full border border-slate-700"></div>
+                <div className="absolute inset-8 rounded-full border border-slate-600 bg-slate-900 flex items-center justify-center overflow-hidden">
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.2)_0,transparent_70%)]"></div>
+                   <BatteryCharging className="w-32 h-32 text-cyan-400 animate-pulse relative z-10" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Global Impact */}
+      <section id="impact" className="py-24 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Rewiring the World</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Our technology isn't just an alternative; it's a replacement. We are paving the way to a post-scarcity energy economy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Globe, title: "Decentralized Grids", desc: "Small form factor allows for massive power generation directly at city centers, eliminating transmission loss." },
+              { icon: ShieldCheck, title: "Grid Security", desc: "Immune to EMPs and weather events, ensuring hospitals and critical infrastructure never go dark." },
+              { icon: Cpu, title: "AI-Optimized Output", desc: "Internal neural networks predict grid demand milliseconds in advance to throttle output dynamically." },
+              { icon: Zap, title: "Infinite Scalability", desc: "Modular core design means scaling up from powering a factory to powering a metropolis is seamless." }
+            ].map((feature, idx) => (
+              <div key={idx} className="p-6 bg-slate-950 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-colors group">
+                <feature.icon className="w-8 h-8 text-cyan-500 mb-4 group-hover:scale-110 transition-transform" />
+                <h4 className="text-lg font-bold mb-2 text-slate-200">{feature.title}</h4>
+                <p className="text-sm text-slate-400">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-blue-950/20 z-0"></div>
+        <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">The Future is Powered by Antevorta</h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            We are currently emerging from stealth mode and opening discussions with select utility providers and sovereign funds.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              className="flex-1 px-6 py-4 bg-slate-900 border border-slate-700 rounded-full focus:outline-none focus:border-cyan-500 text-white placeholder-slate-500"
+              required
+            />
+            <button 
+              type="button"
+              className="px-8 py-4 bg-cyan-500 text-slate-950 font-bold rounded-full hover:bg-cyan-400 transition-colors whitespace-nowrap"
+            >
+              Request Briefing
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="about" className="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div className="col-span-1 md:col-span-2">
+               <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-500 text-slate-950">
+                  <Zap className="w-4 h-4" fill="currentColor" />
+                </div>
+                <span className="text-xl font-bold tracking-widest uppercase">Antevorta</span>
+              </div>
+              <p className="text-slate-400 text-sm max-w-sm">
+                Named after the Roman goddess of the future. We don't just predict the future of energy; we engineer it. Our mission is to obsolete fossil fuels and transcend the limits of current renewables.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Leadership</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Press & Media</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-4">Technology</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">The Core</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Safety Metrics</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Grid Integration</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Patents</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-500 text-sm">
+              &copy; {new Date().getFullYear()} Antevorta Power Systems. All rights reserved.
+            </p>
+            <div className="flex gap-4 text-sm text-slate-500">
+              <a href="#" className="hover:text-white">Privacy Policy</a>
+              <a href="#" className="hover:text-white">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Global CSS overrides for specific animations */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes shimmer {
+          100% { background-position: -20px 0; }
+        }
+        html { scroll-behavior: smooth; }
+      `}} />
+    </div>
+  );
+};
+
+export default App;
+
+```
